@@ -6,14 +6,26 @@
   padding: 0;
   margin: 0;
 }
+:root{
+  --main-color: #2196F3;
+  --main-color-alt: #1787e0;
+}
 html{
   scroll-behavior: smooth;
 }
 body{
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Small Screens */
 @media (min-width: 768px) {
