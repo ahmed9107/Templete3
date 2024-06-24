@@ -9,6 +9,7 @@
 :root{
   --main-color: #2196F3;
   --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
 }
 html{
   scroll-behavior: smooth;
@@ -49,3 +50,45 @@ a{
   }
 }
 /* End Global rules */
+
+/* Start Header Section */
+.header {
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0·0-10px #ddd;
+  -moz-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header .logo{
+  color: var(--main-color);
+  font-size: 26px;
+  font-weight: bold;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .main-nav{
+  display: flex;
+}
+.header .main-nav > li > a{
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 30px;
+  color: black;
+  transition: var(--main-transition);
+}
+.header .main-nav > li > a::before{
+  content: "";
+}
+/* End Header Section */
