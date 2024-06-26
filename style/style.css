@@ -128,11 +128,44 @@ a{
 
 /* Start Landing Section */
 .landing{
-  background-color: #ECECEC;
   position: relative;
 }
+.landing::before {
+  content:"";
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
 .landing .container{
+  min-height: calc(100vh ·72px);
   display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.landing .container .image{
+  width: 66%;
+}
+.landing .container .image img{
+  max-width: 100%;
+}
+.landing .go-down{
+  color: var(--main-color);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+.landing .go-down:hover {
+  color: var(--main-color-alt);
+}
+.landing .go-down i {
 }
 .landing .container .text{
   width: 33%;
@@ -148,11 +181,5 @@ a{
   margin: 5px 0 0;
   color: #666;
   max-width: 500px;
-}
-.landing .container .image{
-  width: 66%;
-}
-.landing .container .image img{
-  width: 100%;
 }
 /* End Landing Section */
