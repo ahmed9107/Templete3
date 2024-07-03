@@ -198,7 +198,6 @@ a{
 }
 .landing .image img{
   width: 600px;
-  max-width: 100%;
 }
 @media (max-width: 991px) {
   .landing .image {
