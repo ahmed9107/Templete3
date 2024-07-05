@@ -159,8 +159,9 @@ a{
 .landing .go-down:hover {
   color: var(--main-color-alt);
 }
-/* .landing .go-down i {
-} */
+.landing .go-down i {
+  animation: bouncing 1.5s infinite;
+}
 .landing .text{
   flex: 1;
 }
@@ -208,5 +209,16 @@ a{
 }
 /* End Landing Section */
 /* Start Animation */
-@keyframes up-and-down{}
+@keyframes up-and-down{
+  0%, 100% {top: 0;}
+  50% {top: -30px;}
+}
+@keyframes bouncing {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-15px);
+  }
+}
 /* End Animation */
