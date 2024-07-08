@@ -125,6 +125,11 @@ a{
   left: 0;
 }
 /* End Header Section */
+/* Start Mega Menu */
+.mega-menu{
+  display: flex;
+}
+/* End Mega Menu */
 
 /* Start Landing Section */
 .landing{
