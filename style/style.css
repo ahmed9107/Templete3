@@ -134,10 +134,14 @@ a{
   border-bottom: 3px solid var(--main-color);
   z-index: 100;
   gap: 40px;
+  top: calc(100% + 50px);
+  transition: top var(--main-transition), opacity var(--main-transition);
 }
 .header .mega-menu .image img{
   max-width: 100%;
 }
+.header .mega-menu .links{}
+.header .mega-menu .links li{}
 /* End Header Section */
 
 /* Start Landing Section */
