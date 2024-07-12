@@ -140,13 +140,31 @@ a{
 .header .mega-menu .image img{
   max-width: 100%;
 }
-.header .mega-menu .links{}
+@media (max-width: 991px) {
+  .header .mega-menu .image {
+    display: none;
+  }
+}
+.header .mega-menu .links{
+  min-width: 240px;
+  flex: 1;
+}
 .header .mega-menu .links li{}
 .header .mega-menu .links li::before{
   content: "";
 }
 .header .mega-menu .links li:hover::before{
   content: "";
+}
+.header .mega-menu .links li a{
+  color: var(--main-color);
+  padding: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .mega-menu .links li a i{
+  margin-right: 10px;
 }
 /* End Header Section */
 
