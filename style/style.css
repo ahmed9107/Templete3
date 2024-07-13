@@ -149,7 +149,9 @@ a{
   min-width: 240px;
   flex: 1;
 }
-.header .mega-menu .links li{}
+.header .mega-menu .links li{
+  position: relative;
+}
 .header .mega-menu .links li::before{
   content: "";
 }
