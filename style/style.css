@@ -148,15 +148,25 @@ a{
 .header .mega-menu .links{
   min-width: 240px;
   flex: 1;
+  overflow: hidden;
 }
 .header .mega-menu .links li{
   position: relative;
 }
 .header .mega-menu .links li::before{
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fafafa;
+  z-index: -1;
+  transition: var(--main-transition);
 }
 .header .mega-menu .links li:hover::before{
   content: "";
+  width: 100%;
 }
 .header .mega-menu .links li a{
   color: var(--main-color);
