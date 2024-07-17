@@ -297,3 +297,15 @@ a{
   }
 }
 /* End Animation */
+/* Start Main title */
+.main-title{
+  margin: 20px auto;
+
+}
+.main-title::before{
+  content: "";
+}
+.main-title::after{
+  content: "";
+}
+/* End Main title */
