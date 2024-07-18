@@ -49,6 +49,49 @@ a{
       width: 1170px;
   }
 }
+.main-title{
+  /* text-align: center; */
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid black;
+  margin: 100px auto;
+  width: fit-content;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  transition: var(--main-transition);
+}
+.main-title::before,
+.main-title::after{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.main-title::before{
+  left: -30px;
+}
+.main-title:hover::before{
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-title::after{
+  right: -30px;
+}
+.main-title:hover::after{
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover{
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
 /* End Global rules */
 
 /* Start Header Section */
@@ -296,16 +339,63 @@ a{
     transform: translateY(-15px);
   }
 }
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
 /* End Animation */
-/* Start Main title */
-.main-title{
-  margin: 20px auto;
 
+/* Start Articles */
+/* .articles{} */
+.articles .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
 }
-.main-title::before{
-  content: "";
+.articles .box{
+  border-radius: 10px;
+  overflow: hidden;
 }
-.main-title::after{
-  content: "";
+.articles .box img{
+  width: 100%;
 }
-/* End Main title */
+.articles .box .content{
+  padding: 15px;
+  border-bottom: 1px solid rgb(75, 73, 73);
+}
+.articles .box .content h3{
+  margin-bottom: 15px;
+}
+.articles .box .content p{
+  line-height: 1.5;
+  color: #666;
+}
+.articles .box .info{
+  width: 100%;
+  padding: 20px 15px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* End Articles */
