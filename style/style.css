@@ -399,7 +399,7 @@ a{
 }
 .gallery .box{
   border: 15px solid white;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
 }
 .gallery img{
