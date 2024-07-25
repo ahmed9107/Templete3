@@ -446,6 +446,19 @@ a{
   z-index: -1;
 }
 /* End gallery */
+/* Start Features */
+.features{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.features .container {
+}
+.features .box {}
+.features .box .img-holder {
+}
+.features .box .img-holder img {
+}
+/* End Features */
 
 /* Start Animation */
 @keyframes up-and-down{
