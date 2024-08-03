@@ -650,7 +650,9 @@ a{
 .team .box .data img{
   max-width: 100%;
 }
-.team .box .data .social{}
+.team .box .data .social{
+  display: flex;
+}
 .team .box .data .info{}
 /* End Team */
 /* Start Animation */
