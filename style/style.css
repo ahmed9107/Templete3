@@ -643,17 +643,81 @@ a{
   gap: 40px;
 }
 .team .box{
-  background-color: var(--section-background);
-  border-radius: 20px;
   position: relative;
 }
+.team .box::before,
+.team .box::after{
+  content: "";
+  border-radius: 15px;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transition: var(--main-transition);
+}
+.team .box::before{
+  content: "";
+  background-color: #f3f3f3;
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+.team .box::after{
+  content: "";
+  background-color: #e4e4e4;
+  width: 0;
+  z-index: -1;
+}
+.team .box:hover::after{
+  content: "";
+  width: calc(100% - 60px);
+}
+.team .box .data{
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
 .team .box .data img{
-  max-width: 100%;
+  width: calc(100% - 60px);
+  border-radius: 15px;
+  transition: var(--main-transition);
+}
+.team .box:hover img{
+  filter: grayscale(100%);
 }
 .team .box .data .social{
+  width: 60px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-.team .box .data .info{}
+.team .box .data .social a {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .box .data .social a:hover i {
+  color: var(--main-color);
+}
+.team .box .data .social i {
+  color: #777;
+  transition: var(--main-transition);
+}
+.team .box .info{
+  margin: 20px 0 20px 80px;
+}
+.team .box .info h3{
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.team .box .info p{
+  margin-top: 15px;
+}
+.team .box:hover .info h3{
+  color: #777;
+}
 /* End Team */
 /* Start Animation */
 @keyframes up-and-down{
