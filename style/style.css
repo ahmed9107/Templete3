@@ -803,6 +803,18 @@ a{
   color: var(--main-color);
 }
 /* End Services */
+/* Start Skills */
+.our-skills{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.our-skills .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End Skills */
 /* Start Animation */
 @keyframes up-and-down{
   0%, 100% {top: 0;}
