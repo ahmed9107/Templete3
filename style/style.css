@@ -811,8 +811,12 @@ a{
 }
 .our-skills .container{
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
 }
 /* End Skills */
 /* Start Animation */
