@@ -818,6 +818,35 @@ a{
     display: none;
   }
 }
+.our-skills .skills{
+  flex: 1;
+}
+.our-skills .skill h3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.our-skills .skill h3 span{
+  font-size: 13px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: var(--main-color);
+}
+.our-skills .skill .the-progress{
+  height: 30px;
+  background-color: #EEE;
+  position: relative;
+}
+.our-skills .skill .the-progress span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 0.5s linear;
+}
 /* End Skills */
 /* Start Animation */
 @keyframes up-and-down{
