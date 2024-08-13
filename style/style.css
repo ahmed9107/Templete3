@@ -848,6 +848,86 @@ a{
   transition: width 0.5s linear;
 }
 /* End Skills */
+/* Start Work Steps */
+.work-steps{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+.work-steps .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .work-steps .container {
+    flex-direction: column;
+  }
+}
+.work-steps img{
+  max-width: 100%;
+  margin-right: 100px;
+}
+@media (max-width: 991px) {
+  .work-steps img {
+    margin: 0 0 50px;
+  }
+}
+.work-steps .info .box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f5f5;
+  padding: 25px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .work-steps .info .box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.work-steps .info .box::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  background-color: #ededed;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.work-steps .info .box:hover::before{
+  width: 100%;
+  height: 100%;
+}
+.work-steps .info .box img{
+  width: 64px;
+  margin-right: 25px;
+}
+@media (max-width: 767px) {
+  .work-steps .info .box img {
+    margin: 0 0 20px;
+  }
+}
+.work-steps .info .box .text h3{
+  font-size: 22px;
+  margin: 0;
+}
+.work-steps .info .box .text p{
+  font-size: 18px;
+  line-height: 1.7;
+  color: #777;
+  margin: 10px 0 0;
+}
+/* End Work Steps */
 /* Start Animation */
 @keyframes up-and-down{
   0%, 100% {top: 0;}
