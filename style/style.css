@@ -943,9 +943,13 @@ a{
   max-width: 450px;
   margin-right: 20px;
 }
+@media (max-width: 991px) {
+  .events img {
+    display: none;
+  }
+}
 .events .info{
   flex: 1;
-  text-align: center;
 }
 .events .info .time{
   display: flex;
@@ -961,11 +965,9 @@ a{
   width: 75px;
   transition: var(--main-transition);
 }
-.events .info .time .unit:hover{
-  border-color: var(--main-color);
-}
 .events .info .time .unit span{
   display: block;
+  transition: var(--main-transition);
 }
 .events .info .time .unit span:first-child {
   font-size: 35px;
@@ -978,23 +980,27 @@ a{
   border-top: 1px solid #d4d4d4;
   padding: 8px 10px;
 }
+.events .info .time .unit:hover,
 .events .info .time .unit:hover span:last-child {
   border-color: var(--main-color);
 }
-.events .info h2{
-  font-size: 28px;
+.events .info .title{
+  text-align: center;
+  font-size: 30px;
+  margin: 40px 0 0;
 }
-.events .info p{
+.events .info .description{
+  text-align: center;
   margin-top: 20px;
   font-size: 18px;
   color: #777;
   line-height: 1.7;
 }
 .events .subscribe{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  margin-top: 50px;
+}
+.events .subscribe form{
   padding: 32px;
   border-radius: 40px;
   background-color: #f6f5f5;
