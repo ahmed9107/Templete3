@@ -1058,6 +1058,17 @@ a{
 }
 /* End Events */
 /* Start Pricing */
+.pricing{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+.pricing .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
 /* End Pricing */
 /* Start Animation */
 @keyframes up-and-down{
