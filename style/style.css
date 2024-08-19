@@ -1067,7 +1067,79 @@ a{
 .pricing .container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
+  gap: 30px;
+}
+.pricing .box{
+  position: relative;
+  transition: var(--main-transition);
+  background: white;
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  z-index: 1;
+}
+.pricing .title{
+  font-weight: bold;
+  font-size: 24px;
+  margin: 30px 0;
+  letter-spacing: -1px;
+}
+.pricing .box .label{
+  position: absolute;
+  right: 20px;
+  font-size: 18px;
+  background-color: var(--main-color);
+  padding: 10px 10px 35px;
+  writing-mode: vertical-rl;
+  color: white;
+  top: 0;
+  font-weight: bold;
+}
+.pricing .box .label::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 20px;
+}
+.pricing img{
+  width: 90px;
+  margin-bottom: 30px;
+}
+.pricing .price{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.pricing .price .amount{
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.pricing .price .time{
+  color: #777;
+  letter-spacing: -1px;
+  font-size: 18px;
+}
+.pricing ul{
+  text-align: left;
+}
+.pricing ul li{
+  border-top: 1px solid #e5e5e5;
+  padding: 20px;
+}
+.pricing a{
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  display: block;
+  margin: 30px auto;
+  width: fit-content;
 }
 /* End Pricing */
 /* Start Animation */
