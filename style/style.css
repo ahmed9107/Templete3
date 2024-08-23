@@ -1273,7 +1273,7 @@ a{
   gap: 20px;
 }
 .stats .box{
-  background-color: #FFFFFF;
+  background-color: white;
   padding: 30px 15px;
   text-align: center;
   position: relative;
@@ -1281,7 +1281,7 @@ a{
   transition: var(--main-transition);
 }
 .stats .box:hover{
-  background-color: white;
+  opacity: 1;
 }
 .stats .box::before,
 .stats .box::after{
@@ -1318,6 +1318,47 @@ a{
   font-weight: bold;
 }
 /* End Stats */
+/* Start Discount */
+.discount{
+  display: flex;
+  align-items: center;
+}
+.discount .image{
+  width: 50%;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 60px 30px;
+  background-image: url(../imgs/discount-background1.jpg);
+  background-size: cover;
+  min-height: 300px;
+}
+.discount .image::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #2196f3ed;
+}
+.discount .content img{
+  width: 300px;
+  max-width: 100%;
+}
+.discount .image .content{
+  position: relative;
+}
+.discount .image .content h2{
+  font-size: 35px;
+}
+.discount .image .content p{
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* End Discount */
 /* Start Animation */
 @keyframes up-and-down{
   0%, 100% {top: 0;}
