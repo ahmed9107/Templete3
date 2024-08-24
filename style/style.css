@@ -1358,6 +1358,39 @@ a{
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.discount .form{
+  width: 50%;
+  text-align: center;
+}
+.discount .form h2{
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.discount .form input{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discount .form .input{
+  border: none;
+  border-bottom: 1px solid #c8c6c6;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: #F9F9F9;
+  width: 300px;
+}
+.discount .form textarea{
+  height: 200px;
+}
+.discount .form input[type="submit"]{
+  padding: 15px 20px;
+  width: 300px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
 /* End Discount */
 /* Start Animation */
 @keyframes up-and-down{
