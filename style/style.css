@@ -1320,18 +1320,54 @@ a{
 /* End Stats */
 /* Start Discount */
 .discount{
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .discount{
+    flex-direction: column;
+  }
+}
+.discount .content img{
+  width: 300px;
+  max-width: 100%;
+}
+.discount .content{
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+.discount .content{
+  position: relative;
+}
+.discount .content h2{
+  font-size: 40px;
+  letter-spacing: -2px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.discount .content p{
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 30px;
 }
 .discount .image{
-  width: 50%;
-  text-align: center;
-  position: relative;
-  color: white;
-  padding: 60px 30px;
   background-image: url(../imgs/discount-background1.jpg);
   background-size: cover;
-  min-height: 300px;
+  flex-basis: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .discount .image{
+    flex-basis: 100%;
+  }
 }
 .discount .image::before{
   content: "";
@@ -1341,55 +1377,46 @@ a{
   height: 100%;
   width: 100%;
   background-color: #2196f3ed;
-}
-.discount .content img{
-  width: 300px;
-  max-width: 100%;
-}
-.discount .image .content{
-  position: relative;
-}
-.discount .image .content h2{
-  font-size: 35px;
-}
-.discount .image .content p{
-  font-size: 18px;
-  line-height: 1.7;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  z-index: -1;
 }
 .discount .form{
-  width: 50%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
 }
-.discount .form h2{
-  font-size: 35px;
-  margin-bottom: 40px;
-}
-.discount .form input{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 991px) {
+  .discount .form{
+    flex-basis: 100%;
+  }
 }
 .discount .form .input{
+  width: 100%;
+  display: block;
   border: none;
   border-bottom: 1px solid #c8c6c6;
   margin-bottom: 20px;
   padding: 15px 20px;
   background-color: #F9F9F9;
-  width: 300px;
 }
 .discount .form textarea{
   height: 200px;
 }
+.discount .form input:focus,
+.discount .form textarea:focus{
+  outline: none;
+}
 .discount .form input[type="submit"]{
   padding: 15px 20px;
-  width: 300px;
+  width: 100%;
   background-color: var(--main-color);
   border: none;
   color: white;
   font-weight: bold;
   font-size: 20px;
+}
+.discount .form input[type="submit"]:hover{
+  background-color: var(--main-color-alt);
 }
 /* End Discount */
 /* Start Animation */
