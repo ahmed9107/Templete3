@@ -95,6 +95,21 @@ a{
   border: 2px solid white;
   transition-delay: 0.5s;
 }
+.dots{
+  background-image: url(../imgs/dots.png);
+  height: 186px;
+  width: 204px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.dots-up{
+  top: 200px;
+  right: 0;
+}
+.dots-down{
+  top: 200px;
+  left: 0;
+}
 /* End Global rules */
 
 /* Start Header Section */
@@ -1424,8 +1439,7 @@ a{
 /* End Discount */
 /* Start Footer */
 .footer{
-  padding-top: var(--main-padding-top);
-  padding-bottom: var(--main-padding-bottom);
+  padding: 70px 0 0;
   position: relative;
   background-color: #191919;
 }
@@ -1434,9 +1448,6 @@ a{
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
 }
-/* .footer .box{
-  color: white;
-} */
 .footer .box h3{
   font-size: 50px;
   color: white;
@@ -1459,12 +1470,28 @@ a{
   font-size: 20px;
   transition: var(--main-transition);
 }
+.footer .box .social .facebook:hover {
+  background-color: #1877f2;
+}
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+}
+.footer .box .social .youtube:hover {
+  background-color: #ff0000;
+}
 .footer .box .text{
   color: #b9b9b9;
   margin: 20px 0;
-  line-height: 1.8;
+  line-height: 2;
 }
-/* .footer .box .links{} */
+@media (max-width: 768px) {
+  .footer .box{
+    text-align: center;
+  }
+  .footer .box .social{
+    justify-content: center;
+  }
+}
 .footer .box .links li{
   padding: 15px 0;
   transition: var(--main-transition);
@@ -1483,9 +1510,10 @@ a{
   margin-right: 10px;
   color: var(--main-color);
 }
+.footer .box .links li:hover{
+  padding-left: 10px;
+}
 .footer .box .links li a:hover{
-  position: relative;
-  left: 10px;
   color: white;
 }
 .footer .box .line{
@@ -1499,17 +1527,27 @@ a{
   margin-right: 20px;
   font-size: 24px;
 }
-/* .footer .box .line .info{} */
-.footer .footer-gallery{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
-  gap: 2px;
-  text-align: center;
+@media (max-width: 768px) {
+  .footer .box .line{
+    flex-direction: column;
+  }
+  .footer .box .line i{
+    margin: 0 0 20px;
+  }
+}
+.footer .box .line .info{
+  line-height: 1.7;
+  flex: 1;
 }
 .footer .footer-gallery img{
-  width: 100%;
-  max-width: 100%;
+  width: 78px;
   border: 3px solid white;
+}
+.copyright{
+  text-align: center;
+  color: white;
+  padding: 25px 0;
+  border-top: 1px solid #313131;
 }
 /* End Footer */
 /* Start Animation */
