@@ -111,7 +111,6 @@ a{
   left: 0;
 }
 /* End Global rules */
-
 /* Start Header Section */
 .header {
   background-color: white;
@@ -261,7 +260,6 @@ a{
   margin-right: 10px;
 }
 /* End Header Section */
-
 /* Start Landing Section */
 .landing{
   position: relative;
