@@ -1,3 +1,3 @@
 # Templete3
-DEMO:\n
+DEMO:
 https://ahmed9107.github.io/Templete3/
